@@ -15,6 +15,11 @@
 		D658EF401FA87AF300499A37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D658EF3F1FA87AF300499A37 /* main.m */; };
 		D658EF4A1FA87AF300499A37 /* SearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D658EF491FA87AF300499A37 /* SearchTests.m */; };
 		D658EF551FA87AF300499A37 /* SearchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D658EF541FA87AF300499A37 /* SearchUITests.m */; };
+		D658EF641FA87B6A00499A37 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = D658EF631FA87B6A00499A37 /* SearchView.m */; };
+		D658EF671FA8826F00499A37 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D658EF661FA8826F00499A37 /* SearchViewController.m */; };
+		D658EF6A1FA886C300499A37 /* SearchNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D658EF691FA886C300499A37 /* SearchNavBar.m */; };
+		D658EF6E1FA88F2300499A37 /* HistoryKeyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D658EF6C1FA88F2300499A37 /* HistoryKeyViewCell.m */; };
+		D658EF6F1FA88F2300499A37 /* HistoryKeyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D658EF6D1FA88F2300499A37 /* HistoryKeyViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,15 @@
 		D658EF501FA87AF300499A37 /* SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D658EF541FA87AF300499A37 /* SearchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchUITests.m; sourceTree = "<group>"; };
 		D658EF561FA87AF300499A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D658EF621FA87B6A00499A37 /* SearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		D658EF631FA87B6A00499A37 /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		D658EF651FA8826F00499A37 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		D658EF661FA8826F00499A37 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		D658EF681FA886C300499A37 /* SearchNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchNavBar.h; sourceTree = "<group>"; };
+		D658EF691FA886C300499A37 /* SearchNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchNavBar.m; sourceTree = "<group>"; };
+		D658EF6B1FA88F2300499A37 /* HistoryKeyViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryKeyViewCell.h; sourceTree = "<group>"; };
+		D658EF6C1FA88F2300499A37 /* HistoryKeyViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryKeyViewCell.m; sourceTree = "<group>"; };
+		D658EF6D1FA88F2300499A37 /* HistoryKeyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryKeyViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +124,15 @@
 				D658EF3B1FA87AF300499A37 /* LaunchScreen.storyboard */,
 				D658EF3E1FA87AF300499A37 /* Info.plist */,
 				D658EF3F1FA87AF300499A37 /* main.m */,
+				D658EF621FA87B6A00499A37 /* SearchView.h */,
+				D658EF631FA87B6A00499A37 /* SearchView.m */,
+				D658EF651FA8826F00499A37 /* SearchViewController.h */,
+				D658EF661FA8826F00499A37 /* SearchViewController.m */,
+				D658EF681FA886C300499A37 /* SearchNavBar.h */,
+				D658EF691FA886C300499A37 /* SearchNavBar.m */,
+				D658EF6B1FA88F2300499A37 /* HistoryKeyViewCell.h */,
+				D658EF6C1FA88F2300499A37 /* HistoryKeyViewCell.m */,
+				D658EF6D1FA88F2300499A37 /* HistoryKeyViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -239,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D658EF3D1FA87AF300499A37 /* LaunchScreen.storyboard in Resources */,
+				D658EF6F1FA88F2300499A37 /* HistoryKeyViewCell.xib in Resources */,
 				D658EF3A1FA87AF300499A37 /* Assets.xcassets in Resources */,
 				D658EF381FA87AF300499A37 /* Main.storyboard in Resources */,
 			);
@@ -265,7 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D658EF641FA87B6A00499A37 /* SearchView.m in Sources */,
+				D658EF6A1FA886C300499A37 /* SearchNavBar.m in Sources */,
 				D658EF351FA87AF300499A37 /* ViewController.m in Sources */,
+				D658EF6E1FA88F2300499A37 /* HistoryKeyViewCell.m in Sources */,
+				D658EF671FA8826F00499A37 /* SearchViewController.m in Sources */,
 				D658EF401FA87AF300499A37 /* main.m in Sources */,
 				D658EF321FA87AF300499A37 /* AppDelegate.m in Sources */,
 			);
