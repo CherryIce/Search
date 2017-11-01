@@ -62,6 +62,8 @@ static NSString * TABLEVIEWCELLID = @"HistoryKeyViewCell";
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.tableFooterView = [UIView new];
+        _tableView.separatorColor = [UIColor darkTextColor];
+        _tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         [_tableView registerNib:[UINib nibWithNibName:TABLEVIEWCELLID bundle:nil] forCellReuseIdentifier:TABLEVIEWCELLID];
     }
     return _tableView;
@@ -97,6 +99,7 @@ static NSString * TABLEVIEWCELLID = @"HistoryKeyViewCell";
     
     self.navBar.searchKeyWordCall = ^(NSString *keyword) {
         NSLog(@"搜索的关键词是:%@",keyword);
+        [weakSelf showSearchKey:keyword];
         NSArray * dataArr = [[NSUserDefaults standardUserDefaults] objectForKey:@"History_Search"];
         NSMutableArray * dataArray = [NSMutableArray arrayWithArray:dataArr];
         [dataArray addObject:keyword];
@@ -177,6 +180,7 @@ static NSString * TABLEVIEWCELLID = @"HistoryKeyViewCell";
     /**搜索之前的关键词**/
     NSString * keyword = self.dataSource[indexPath.row];
     NSLog(@"搜索的关键词是:%@",keyword);
+    [self showSearchKey:keyword];
 }
 
 /**
@@ -187,6 +191,20 @@ static NSString * TABLEVIEWCELLID = @"HistoryKeyViewCell";
     [self.dataSource removeAllObjects];
     [[NSUserDefaults standardUserDefaults] setObject:self.dataSource forKey:@"History_Search"];
     [self.tableView reloadData];
+}
+
+/**
+ 显示搜索内容
+ **/
+- (void) showSearchKey:(NSString *)keyword
+{
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"搜索关键词" message:keyword preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
